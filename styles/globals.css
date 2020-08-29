@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Be Vietnam, sans-serif;
 }
 
 a {
@@ -13,4 +12,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.heading {
+  font-family: Montserrat, sans-serif;
+}
+
+.link-btn {
+  position: relative;
+}
+
+.link-btn::before {
+  content: '';
+  background: black;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: -1px;
+  bottom: -7px;
 }
