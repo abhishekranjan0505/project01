@@ -88,8 +88,9 @@ const Products = () => {
                 position: absolute;
                 bottom: 15px;
                 z-index: 2;
-                left: 50%;
-                transform: translateX(-50%);
+                width: 100%;
+                display: grid;
+                place-items: center;
             }
             #all-products-container {
                 margin-bottom: 50px;

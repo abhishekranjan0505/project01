@@ -13,7 +13,6 @@ export default function Home() {
       </Head>
 
       <div>
-
         <Header />
 
         <Intro />
@@ -23,7 +22,6 @@ export default function Home() {
         <Products />
 
       </div>
-
     </div>
-  )
+  );
 }
