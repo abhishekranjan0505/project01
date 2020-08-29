@@ -35,8 +35,6 @@ const Intro = () => {
           padding: 0px 0px 20px 5%;
         }
         h1 {
-          font-weight: 400;
-          line-height: 120%;
           color: #221f20;
           margin-bottom: 0;
         }
