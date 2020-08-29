@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { bgLightColor } from '../constants';
 
 const Intro = () => {
   return (
@@ -22,12 +23,15 @@ const Intro = () => {
             </Link>
           </div>
         </div>
-        <img id="image" src="/intro-banner.jpg" alt="" />
+
+        <div id='img-container'>
+          <img id="image" src="/images/intro-banner.jpg" alt="" />
+        </div>
       </div>
 
       <style jsx>{`
         #intro {
-          background-color: #cbd1d2;
+          background-color: ${bgLightColor};
           padding-top: 100px;
         }
 
@@ -49,6 +53,16 @@ const Intro = () => {
         #image {
           width: 100vw;
           height: auto;
+        }
+        #img-container::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 150px 100vw 0 0;
+          border-color: ${bgLightColor} transparent transparent transparent;
         }
       `}</style>
     </>
