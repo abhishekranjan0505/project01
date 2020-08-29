@@ -5,8 +5,8 @@ import { Parallax } from 'react-scroll-parallax';
 const About = () => {
     return (
         <>
-        <div id='about' style={{ height: '1000px'}}>
-            <div style={{ padding: '8px'}}>
+        <div id='about'>
+            <div style={{ padding: '50px 8px 50px 8px'}}>
 
                 <div>
                     <div id='images-container'>
@@ -16,7 +16,7 @@ const About = () => {
                         </div>
 
                             <div id='img2-container'>
-                        <Parallax className='custom-class' y={[-20, 20]} >
+                        <Parallax className='custom-class' y={[-20, 30]} >
                                 <img src='https://djzfsf1yiw-flywheel.netdna-ssl.com/wp-content/uploads/2020/04/Custom-Works-2-650x830.jpg' className='img' id='img2' />
                         </Parallax>
                             </div>
