@@ -14,16 +14,26 @@ a {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "exodus-demo-sharpen";
+  src: url("../assets/fonts/ExodusDemo-Sharpen.otf") format("woff"),
+    url("../assets/fonts/ExodusDemo-Sharpen.otf") format("opentype"),
+    url("../assets/fonts/ExodusDemo-Sharpen.otf") format("truetype");
+}
 .heading {
-  font-family: Montserrat, sans-serif;
+  font-family: "exodus-demo-sharpen", serif;
+  text-transform: uppercase;
 }
 
 .link-btn {
   position: relative;
+  font-size: 0.6875rem;
+  letter-spacing: 2.2px;
+  font-weight: bold;
 }
 
 .link-btn::before {
-  content: '';
+  content: "";
   background: black;
   position: absolute;
   height: 4px;
