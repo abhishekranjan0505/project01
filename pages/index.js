@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Servicing from "../components/Servicing";
 import Products from "../components/Products";
+import Projects from "../components/Projects";
 
 export default function Home() {
   return (
@@ -19,9 +20,12 @@ export default function Home() {
         <Intro />
 
         <About />
+
         <Products />
 
         <Servicing />
+
+        <Projects />
       </div>
     </div>
   );

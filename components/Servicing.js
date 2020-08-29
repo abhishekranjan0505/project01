@@ -4,7 +4,7 @@ import { Parallax } from "react-scroll-parallax";
 const Servicing = () => {
   return (
     <>
-      <div id="servicing" style={{ height: "1000px" }}>
+      <div id="servicing" style={{ padding: "50px 8px 50px 8px" }}>
         <div style={{ padding: "8px" }}>
           <div>
             <div id="images-container">
