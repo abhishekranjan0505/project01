@@ -15,7 +15,7 @@ const About = () => {
                         </div>
 
                             <div id='img2-container'>
-                        <Parallax className='custom-class' y={[-20, 30]} >
+                        <Parallax className='custom-class' y={[-30, 10]} >
                                 <img src='https://djzfsf1yiw-flywheel.netdna-ssl.com/wp-content/uploads/2020/04/Custom-Works-2-650x830.jpg' className='img' id='img2' />
                         </Parallax>
                             </div>
