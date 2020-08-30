@@ -2,31 +2,26 @@ import Link from "next/link";
 import { Parallax } from "react-scroll-parallax";
 
 const About = () => {
-  return (
-    <>
-      <div id="about" style={{ height: "1000px" }}>
-        <div style={{ padding: "8px" }}>
-          <div>
-            <div id="images-container">
-              <div id="img1-container">
-                <img
-                  src="https://djzfsf1yiw-flywheel.netdna-ssl.com/wp-content/uploads/2020/03/Adige-About-Us-1-1250x980.jpg"
-                  className="img"
-                  id="img1"
-                />
-              </div>
+    return (
+        <>
+        <div id='about'>
+            <div style={{ padding: '50px 8px 50px 8px'}}>
 
-              <div id="img2-container">
-                <Parallax className="custom-class" y={[-20, 20]}>
-                  <img
-                    src="https://djzfsf1yiw-flywheel.netdna-ssl.com/wp-content/uploads/2020/04/Custom-Works-2-650x830.jpg"
-                    className="img"
-                    id="img2"
-                  />
-                </Parallax>
-              </div>
-            </div>
-          </div>
+                <div>
+                    <div id='images-container'>
+
+                        <div id='img1-container'>
+                            <img src='https://djzfsf1yiw-flywheel.netdna-ssl.com/wp-content/uploads/2020/03/Adige-About-Us-1-1250x980.jpg' className='img' id='img1' />
+                        </div>
+
+                            <div id='img2-container'>
+                        <Parallax className='custom-class' y={[-20, 30]} >
+                                <img src='https://djzfsf1yiw-flywheel.netdna-ssl.com/wp-content/uploads/2020/04/Custom-Works-2-650x830.jpg' className='img' id='img2' />
+                        </Parallax>
+                            </div>
+
+                    </div>
+                </div>
 
           <div id="about-text">
             <h2 className="heading">ABOUT US</h2>
