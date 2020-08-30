@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Parallax } from "react-scroll-parallax";
+import { textDarkColor } from "../constants";
 
 const Servicing = () => {
   return (
@@ -10,7 +11,7 @@ const Servicing = () => {
             <div id="images-container">
               <div id="img1-container">
                 <img
-                  src="/servicing-Marble-Carving.jpg"
+                  src="/images/servicing-Marble-Carving.jpg"
                   className="img"
                   id="img1"
                 />
@@ -18,7 +19,11 @@ const Servicing = () => {
 
               <div id="img2-container">
                 <Parallax className="custom-class" y={[-20, 20]}>
-                  <img src="/servicing-img.jpg" className="img" id="img2" />
+                  <img
+                    src="/images/servicing-img.jpg"
+                    className="img"
+                    id="img2"
+                  />
                 </Parallax>
               </div>
             </div>
@@ -69,7 +74,7 @@ const Servicing = () => {
         }
         h2 {
           fontsize: 1.375rem;
-          color: #221f20;
+          color: ${textDarkColor};
           margin-top: 80px;
           margin-bottom: 0;
         }
