@@ -7,6 +7,7 @@ import Products from "../components/Products";
 import Projects from "../components/Projects";
 import Instagram from "../components/Instagram";
 import Artisans from "../components/Artisans";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -32,6 +33,8 @@ export default function Home() {
         <Projects />
 
         <Instagram />
+
+        <Footer />
       </div>
     </div>
   );
