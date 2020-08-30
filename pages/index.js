@@ -1,8 +1,11 @@
-import Head from 'next/head'
-import Intro from '../components/Intro';
-import Header from '../components/Header';
-import About from '../components/About';
-import Products from '../components/Products';
+import Head from "next/head";
+import Intro from "../components/Intro";
+import Header from "../components/Header";
+import About from "../components/About";
+import Servicing from "../components/Servicing";
+import Products from "../components/Products";
+import Projects from "../components/Projects";
+import Instagram from "../components/Instagram";
 
 export default function Home() {
   return (
@@ -21,6 +24,11 @@ export default function Home() {
 
         <Products />
 
+        <Servicing />
+
+        <Projects />
+
+        <Instagram />
       </div>
     </div>
   );
