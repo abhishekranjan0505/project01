@@ -14,21 +14,21 @@ const Projects = () => {
 
         <div id="projects-img" data-aos="fade-up">
           <Link href="/">
-            <div id="img1">
+            <div className="image">
               <img src="/images/projects1.jpg" alt="" />
               <h2 className="heading">maison vernon</h2>
             </div>
           </Link>
 
           <Link href="/">
-            <div id="img2">
+            <div className="image" id="img2">
               <img src="/images/projects2.jpg" alt="" />
               <h2 className="heading">sear's crescent</h2>
             </div>
           </Link>
 
           <Link href="/">
-            <div id="img3">
+            <div className="image">
               <img src="/images/projects3.jpg" alt="" />
               <h2 className="heading">maison commonwealth</h2>
             </div>
@@ -68,21 +68,23 @@ const Projects = () => {
         }
         img {
           width: 42.5vw;
-          opacity: 0.8;
-        }
-        #img1 {
-          position: relative;
-          text-align: center;
         }
         #img2 {
-          position: relative;
           margin-left: 5vw;
           margin-right: 5vw;
-          text-align: center;
         }
-        #img3 {
+        .image {
           position: relative;
           text-align: center;
+        }
+        .image::after {
+          content: "";
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+          width: 100%;
+          height: 40%;
+          background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
         }
         h2 {
           color: ${textLightColor};
@@ -90,6 +92,7 @@ const Projects = () => {
           position: absolute;
           bottom: 0;
           width: 100%;
+          z-index: 2;
         }
         .link-btn::before {
           background: ${textLightColor};

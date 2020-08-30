@@ -5,6 +5,7 @@ import About from "../components/About";
 import Servicing from "../components/Servicing";
 import Products from "../components/Products";
 import Projects from "../components/Projects";
+import Instagram from "../components/Instagram";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
         <Servicing />
 
         <Projects />
+
+        <Instagram />
       </div>
     </div>
   );
