@@ -13,5 +13,6 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-scroll-parallax": "^2.3.4"
-  }
+  },
+  "devDependencies": {}
 }

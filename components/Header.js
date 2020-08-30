@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { textDarkColor } from "../constants.js";
 
 const Header = () => {
   const [hover, setHover] = useState(false);
-  
+
   const hoverHandler = () => {
     setHover(!hover);
   };
@@ -19,7 +20,7 @@ const Header = () => {
         <div id={hover ? "hover-div1" : "middle-div"}></div>
         <div id={hover ? "hover-div2" : "lower-div"}></div>
       </div>
-      
+
       <style jsx>{`
         #header {
           display: flex;
@@ -48,35 +49,35 @@ const Header = () => {
         #upper-div {
           height: 4px;
           width: 100%;
-          background-color: #221f20;
+          background-color: ${textDarkColor};
         }
         #middle-div {
           width: 66%;
           height: 4px;
-          background-color: #221f20;
+          background-color: ${textDarkColor};
           transition: width 0.3s;
         }
         #lower-div {
           width: 33%;
           height: 4px;
-          background-color: #221f20;
+          background-color: ${textDarkColor};
           transition: width 0.3s;
         }
         #hover-div1 {
           width: 100%;
           height: 4px;
           transition: width 0.3s;
-          background-color: #221f20;
+          background-color: ${textDarkColor};
         }
         #hover-div2 {
           width: 100%;
           transition: width 0.3s;
           height: 4px;
-          background-color: #221f20;
+          background-color: ${textDarkColor};
         }
       `}</style>
     </div>
   );
-}
+};
 
 export default Header;
