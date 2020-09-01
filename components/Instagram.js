@@ -32,7 +32,7 @@ const Instagram = () => {
           </div>
 
           <div id="img-row2">
-            <div className="image" data-aos="fade-up">
+            <div className="image" data-aos="fade-up" data-aos-delay="400">
               <Link href="/">
                 <a className="img-link">
                   <img src="/images/instagram3.jpg" />
@@ -40,7 +40,7 @@ const Instagram = () => {
               </Link>
             </div>
 
-            <div className="image" data-aos="fade-up" data-aos-delay="300">
+            <div className="image" data-aos="fade-up" data-aos-delay="700">
               <Link href="/">
                 <a className="img-link">
                   <img src="/images/instagram4.jpg" />

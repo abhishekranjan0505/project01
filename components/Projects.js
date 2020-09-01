@@ -30,7 +30,9 @@ const Projects = () => {
           <Link href="/">
             <div className="image">
               <img src="/images/projects3.jpg" alt="" />
-              <h2 className="heading">maison commonwealth</h2>
+              <h2 style={{ fontSize: "18px" }} className="heading">
+                maison commonwealth
+              </h2>
             </div>
           </Link>
         </div>
@@ -93,6 +95,7 @@ const Projects = () => {
           bottom: 0;
           width: 100%;
           z-index: 2;
+          overflow: hidden;
         }
         .link-btn::before {
           background: ${textLightColor};
