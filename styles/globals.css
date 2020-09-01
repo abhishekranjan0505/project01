@@ -20,6 +20,7 @@ a {
     url("../assets/fonts/ExodusDemo-Sharpen.otf") format("opentype"),
     url("../assets/fonts/ExodusDemo-Sharpen.otf") format("truetype");
 }
+
 .heading {
   font-family: "exodus-demo-sharpen", serif;
   text-transform: uppercase;
@@ -43,4 +44,31 @@ a {
   width: 100%;
   left: -1px;
   bottom: -7px;
+}
+
+.shutter {
+  position: fixed;
+  height: 100vh;
+  z-index: 50;
+  width: 100vw;
+}
+
+.shutter-top {
+  position: absolute;
+  background: gray;
+  height: 50%;
+  top: 0;
+  width: 100%;
+  transition: all .8s;
+  transition-delay: .5s;
+}
+
+.shutter-bottom {
+  position: absolute;
+  background: gray;
+  height: 50%;
+  bottom: 0;
+  width: 100%;
+  transition: all .8s;
+  transition-delay: .5s;
 }

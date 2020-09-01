@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { textDarkColor } from "../constants.js";
 
 const Header = () => {
@@ -7,6 +7,22 @@ const Header = () => {
   const hoverHandler = () => {
     setHover(!hover);
   };
+
+  useEffect(() => {
+    const h = document.getElementById("header");
+    var prev_Y = window.pageYOffset;
+    window.addEventListener("scroll", () => {
+      console.log(window.pageYOffset)
+      if(window.pageYOffset > 40) {
+        if(window.pageYOffset > prev_Y) {
+          h.style.top = "-50px";
+        } else {
+          h.style.top = "20px";
+        }
+      } 
+      prev_Y = window.pageYOffset;
+    })
+  })
 
   return (
     <div id="header">
@@ -26,9 +42,10 @@ const Header = () => {
           display: flex;
           align-items: center;
           position: fixed;
-          z-index: 100;
+          z-index: 10;
           left: 5%;
           top: 20px;
+          transition: .2s;
         }
         #logo {
           height: 44px;

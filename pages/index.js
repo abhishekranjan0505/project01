@@ -8,6 +8,7 @@ import Projects from "../components/Projects";
 import Instagram from "../components/Instagram";
 import Artisans from "../components/Artisans";
 import Footer from "../components/Footer";
+import Shutter from "../components/Shutter";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
       </Head>
 
       <div>
+
+        <Shutter />
+
         <Header />
 
         <Intro />
@@ -35,6 +39,7 @@ export default function Home() {
         <Instagram />
 
         <Footer />
+        
       </div>
     </div>
   );
