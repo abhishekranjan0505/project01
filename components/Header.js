@@ -22,14 +22,10 @@ const Header = (props) => {
   return (
     <div id="header">
       <img id="logo" src="/images/A.png" alt="" />
-      <div
-        className="drawer-toggle"
-        id={props.showNav ? "nav-open" : "nav-closed"}
-        onClick={props.clicked}
-      >
+      <div className="drawer-toggle" onClick={props.clicked}>
         <div></div>
-        <div></div>
-        <div></div>
+        <div id={props.showNav ? "nav-open-middle" : ""}></div>
+        <div id={props.showNav ? "nav-open-lower" : ""}></div>
       </div>
 
       <style jsx>{`
@@ -62,15 +58,31 @@ const Header = (props) => {
         }
         .drawer-toggle div:nth-of-type(2) {
           width: 66%;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
         }
         .drawer-toggle div:nth-of-type(3) {
           width: 33%;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
         }
-        #nav-open {
-          align-items: flex-end;
+        #nav-open-middle {
+          position: relative;
+          -moz-transform: translateX(52%);
+          -ms-transform: translateX(52%);
+          -webkit-transform: translateX(52%);
+          transform: translateX(52%);
         }
-        #nav-closed {
-          align-items: flex-start;
+        #nav-open-lower {
+          position: relative;
+          -moz-transform: translateX(200%);
+          -ms-transform: translateX(200%);
+          -webkit-transform: translateX(200%);
+          transform: translateX(200%);
         }
       `}</style>
     </div>
