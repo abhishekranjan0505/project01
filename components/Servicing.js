@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Parallax } from "react-scroll-parallax";
 import { textDarkColor } from "../constants";
+import Button from '../ui/Button';
 
 const Servicing = () => {
   return (
@@ -43,9 +44,7 @@ const Servicing = () => {
             </p>
 
             <div>
-              <Link href="/">
-                <a className="link-btn">LEARN MORE</a>
-              </Link>
+            <Button text="LEARN MORE" url="/" />
             </div>
           </div>
         </div>

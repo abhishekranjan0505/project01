@@ -1,40 +1,31 @@
-import React, { useState, useEffect } from "react";
-import { textDarkColor } from "../constants.js";
+import React, { useEffect } from "react";
+import { textDarkColor, navItemsColor } from "../constants.js";
 
-const Header = () => {
-  const [hover, setHover] = useState(false);
-
-  const hoverHandler = () => {
-    setHover(!hover);
-  };
-
+const Header = (props) => {
   useEffect(() => {
+    document.body.style.overflow = props.showNav ? "hidden" : "auto";
     const h = document.getElementById("header");
     var prev_Y = window.pageYOffset;
     window.addEventListener("scroll", () => {
-      console.log(window.pageYOffset)
-      if(window.pageYOffset > 40) {
-        if(window.pageYOffset > prev_Y) {
+      console.log(window.pageYOffset);
+      if (window.pageYOffset > 40) {
+        if (window.pageYOffset > prev_Y) {
           h.style.top = "-50px";
         } else {
           h.style.top = "20px";
         }
-      } 
+      }
       prev_Y = window.pageYOffset;
-    })
-  })
+    });
+  });
 
   return (
     <div id="header">
       <img id="logo" src="/images/A.png" alt="" />
-      <div
-        id="drawer-toggle"
-        onMouseEnter={hoverHandler}
-        onMouseLeave={hoverHandler}
-      >
-        <div id="upper-div"></div>
-        <div id={hover ? "hover-div1" : "middle-div"}></div>
-        <div id={hover ? "hover-div2" : "lower-div"}></div>
+      <div className="drawer-toggle" onClick={props.clicked}>
+        <div></div>
+        <div id={props.showNav ? "nav-open-middle" : ""}></div>
+        <div id={props.showNav ? "nav-open-lower" : ""}></div>
       </div>
 
       <style jsx>{`
@@ -45,52 +36,54 @@ const Header = () => {
           z-index: 10;
           left: 5%;
           top: 20px;
-          transition: .2s;
+          transition: .3s;
         }
         #logo {
           height: 44px;
           width: 40px;
           margin-right: 20px;
         }
-        #drawer-toggle {
+        .drawer-toggle {
           width: 30px;
           height: 24px;
           display: flex;
           flex-flow: column;
           justify-content: space-between;
           box-sizing: border-box;
-          cursor: pointer;
           transition: align-items 2s;
         }
-
-        #upper-div {
+        .drawer-toggle > div {
           height: 4px;
+          background-color: ${props.showNav ? navItemsColor : textDarkColor};
           width: 100%;
-          background-color: ${textDarkColor};
         }
-        #middle-div {
+        .drawer-toggle div:nth-of-type(2) {
           width: 66%;
-          height: 4px;
-          background-color: ${textDarkColor};
-          transition: width 0.3s;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
         }
-        #lower-div {
+        .drawer-toggle div:nth-of-type(3) {
           width: 33%;
-          height: 4px;
-          background-color: ${textDarkColor};
-          transition: width 0.3s;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
         }
-        #hover-div1 {
-          width: 100%;
-          height: 4px;
-          transition: width 0.3s;
-          background-color: ${textDarkColor};
+        #nav-open-middle {
+          position: relative;
+          -moz-transform: translateX(52%);
+          -ms-transform: translateX(52%);
+          -webkit-transform: translateX(52%);
+          transform: translateX(52%);
         }
-        #hover-div2 {
-          width: 100%;
-          transition: width 0.3s;
-          height: 4px;
-          background-color: ${textDarkColor};
+        #nav-open-lower {
+          position: relative;
+          -moz-transform: translateX(200%);
+          -ms-transform: translateX(200%);
+          -webkit-transform: translateX(200%);
+          transform: translateX(200%);
         }
       `}</style>
     </div>

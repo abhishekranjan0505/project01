@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { bgDarkColor, textLightColor } from "../constants";
+import Button from "../ui/Button";
 
 const Footer = () => {
     return (
@@ -9,9 +10,7 @@ const Footer = () => {
 
             <div>
                 <div style={{ textAlign: "center"}}>
-                    <Link href="/">
-                        <a className="link-btn">CONTACT US</a>
-                    </Link>
+                    <Button text="CONTACT US" url="/" color="light" />
                 </div>
             </div>
 
