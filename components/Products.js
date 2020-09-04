@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { bgDarkColor } from "../constants";
 import AOS from 'aos'
 import Link from 'next/link'
+import Button from "../ui/Button";
+import Heading from "../ui/Heading";
 
 const Products = () => {
     useEffect(() => {
@@ -16,7 +18,8 @@ const Products = () => {
                     <p className='para'>EXCLUSIVE PRODUCTS</p>
                 </div>
                 
-                <h2 className="heading">BROUGHT TO BOSTON BY ADIGE DESIGN</h2>
+                {/* <h2 className="heading">BROUGHT TO BOSTON BY ADIGE DESIGN</h2> */}
+                <Heading text="BROUGHT TO BOSTON BY ADIGE DESIGN" color="light" />
 
                 <div id='images-container'>
                     <div data-aos='fade-up'>
@@ -52,7 +55,10 @@ const Products = () => {
                 </div>
 
                 <div id='all-products-container'>
-                    <span className="link-btn" id='all-product'>ALL PRODUCTS</span>
+                    {/* <span className="link-btn" id='all-product'>ALL PRODUCTS</span> */}
+                    <div style={{ float: "right"}}>
+                        <Button text="ALL PRODUCTS" url="/" color="light" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,12 +100,6 @@ const Products = () => {
             }
             #all-products-container {
                 margin-bottom: 50px;
-            }
-            #all-product {
-                float: right;
-            }
-            #all-product::before {
-                background: white;
             }
         `}</style>
         </>

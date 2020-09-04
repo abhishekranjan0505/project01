@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { bgLightColor, textDarkColor } from "../constants";
+import Button from '../ui/Button';
+import Heading from "../ui/Heading";
 
 const Intro = () => {
   return (
@@ -9,21 +11,12 @@ const Intro = () => {
           <div id="font">
             International artisan & construction material sourcing company
           </div>
+          
+          <Heading text="Discovering special people producing extraordinary products" color="dark" size="large" />
 
-          <h1 className="heading">
-            Discovering special people producing extraordinary products
-          </h1>
-
-          <div>
-            <Link href="/">
-              <a style={{ marginRight: "20px" }} className="link-btn">
-                OUR PRODUCTS
-              </a>
-            </Link>
-
-            <Link href="/">
-              <a className="link-btn">OUR SERVICES</a>
-            </Link>
+          <div style={{ display: "flex" }}>
+            <Button text="OUR PRODUCTS" url="/" style={{marginRight: "20px"}} />
+            <Button text="OUR SERVICES" url="/" />
           </div>
         </div>
 

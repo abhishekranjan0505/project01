@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Parallax } from "react-scroll-parallax";
+import Button from "../ui/Button";
 
 const About = () => {
     return (
@@ -14,11 +15,11 @@ const About = () => {
                             <img src='https://djzfsf1yiw-flywheel.netdna-ssl.com/wp-content/uploads/2020/03/Adige-About-Us-1-1250x980.jpg' className='img' id='img1' />
                         </div>
 
-                            <div id='img2-container'>
-                        <Parallax className='custom-class' y={[-30, 10]} >
-                                <img src='https://djzfsf1yiw-flywheel.netdna-ssl.com/wp-content/uploads/2020/04/Custom-Works-2-650x830.jpg' className='img' id='img2' />
-                        </Parallax>
-                            </div>
+                        <div id='img2-container'>
+                          <Parallax className='custom-class' y={[-30, 10]} >
+                            <img src='https://djzfsf1yiw-flywheel.netdna-ssl.com/wp-content/uploads/2020/04/Custom-Works-2-650x830.jpg' className='img' id='img2' />
+                          </Parallax>
+                        </div>
 
                     </div>
                 </div>
@@ -33,9 +34,7 @@ const About = () => {
             </p>
 
             <div>
-              <Link href="/">
-                <a className="link-btn">LEARN MORE</a>
-              </Link>
+              <Button text="LEARN MORE" url="/" color="dark" />
             </div>
           </div>
         </div>

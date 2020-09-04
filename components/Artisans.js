@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { bgLightColor, textDarkColor, textLightColor } from "../constants";
 import AOS from 'aos'
 import Link from 'next/link'
+import Button from "../ui/Button";
 
 const Artisans = () => {
 
@@ -53,7 +54,9 @@ const Artisans = () => {
                 </div>
 
                 <div id='all-products-container'>
-                    <span className="link-btn" id='all-product'>ALL ARTISANS</span>
+                    <div style={{ float: "right"}}>
+                        <Button text="ALL ARTISANS" url="/" color="dark" />
+                    </div>
                 </div>
             </div>
         </div>

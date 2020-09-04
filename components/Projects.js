@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import Link from "next/link";
 import { bgDarkColor, textLightColor } from "../constants.js";
+import Button from '../ui/Button';
 
 const Projects = () => {
   useEffect(() => {
@@ -37,10 +38,8 @@ const Projects = () => {
           </Link>
         </div>
 
-        <div style={{ color: "#fff" }}>
-          <Link href="/">
-            <a className="link-btn">Our Projects</a>
-          </Link>
+        <div>
+          <Button text="OUR PROJECTS" url="/" color="light" />
         </div>
       </div>
 
@@ -96,9 +95,6 @@ const Projects = () => {
           width: 100%;
           z-index: 2;
           overflow: hidden;
-        }
-        .link-btn::before {
-          background: ${textLightColor};
         }
       `}</style>
     </>

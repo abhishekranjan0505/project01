@@ -8,6 +8,9 @@ const Shutter = () => {
         const b = document.getElementsByClassName('shutter-bottom')[0];
         t.style.height = 0;
         b.style.height = 0;
+        setTimeout(() => {
+            document.getElementsByClassName("shutter")[0].style.display = "none";
+        }, 1500)
     })
 
     return (

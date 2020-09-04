@@ -33,9 +33,10 @@ const Header = (props) => {
           display: flex;
           align-items: center;
           position: fixed;
-          z-index: 100;
+          z-index: 10;
           left: 5%;
           top: 20px;
+          transition: .3s;
         }
         #logo {
           height: 44px;
